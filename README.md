@@ -8,3 +8,4 @@
   * Ubuntu users: `curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - && sudo apt-get install -y nodejs`
 3. Install gulp & bower: `sudo npm install -g gulp bower`
 4. `npm install && bower install`
+5. `gulp` to push the application to CouchDB & open it in a browser
