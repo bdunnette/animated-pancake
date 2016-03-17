@@ -1,0 +1,29 @@
+{
+  "name": "image-mapper",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Brian Dunnette <dunn0172@umn.edu>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "_attachments/bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "angular": "^1.5.1"
+  },
+  "dependencies": {
+    "angular": "^1.5.1",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.1",
+    "CornerCouch": "*"
+  }
+}

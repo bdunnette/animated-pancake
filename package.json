@@ -1,0 +1,16 @@
+{
+  "name": "image-mapper",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Dunnette <dunn0172@umn.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-couchapp": "^0.1.0"
+  }
+}
