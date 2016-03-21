@@ -24,6 +24,8 @@
     "angular": "^1.5.1",
     "bootstrap": "^3.3.6",
     "angular-route": "^1.5.1",
-    "CornerCouch": "*"
+    "CornerCouch": "*",
+    "ui-leaflet": "^1.0.0",
+    "ui-leaflet-draw": "^0.0.3"
   }
 }
