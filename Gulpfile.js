@@ -1,11 +1,16 @@
 var gulp = require('gulp'),
 browserSync = require('browser-sync'),
-couchapp = require('gulp-couchapp');
+couchapp = require('gulp-couchapp'),
+bower = require('gulp-bower');
 
 var couchappOptions = {
   attachments:'app'
   // auth:{username:admin, password:admin}
 };
+
+gulp.task('bower', function() {
+  return bower();
+});
 
 gulp.task('push', function () {
   return gulp.src('couchapp.js')
@@ -29,26 +34,10 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('js', function() {
-  return gulp.src('client/**/*.js')
-    // do stuff to JavaScript files
-    //.pipe(uglify())
-    //.pipe(gulp.dest('...'));
-});
-
-gulp.task('css', function() {
-  return gulp.src('client/**/*.css')
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-})
-
 gulp.task('bs-reload', function() {
   browserSync.reload();
 });
 
-gulp.task('default', ['push', 'browser-sync'], function() {
-  gulp.watch('app/**/*.js', ['push', 'js', browserSync.reload]);
-  gulp.watch('app/**/*.css', ['css', browserSync.reload]);
-  gulp.watch('app/**/*.html', ['push', 'bs-reload']);
+gulp.task('default', ['bower', 'push', 'browser-sync'], function() {
+  gulp.watch(['app/**/*.js','app/**/*.css','app/**/*.html'], ['push', 'bs-reload']);
 });
