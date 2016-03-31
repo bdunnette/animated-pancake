@@ -10,7 +10,7 @@ var ddoc = {
   ],
   views: {
     "slides": {
-      "map": "function(doc) {if (doc.type === 'slide') {emit(null, doc);}}"
+      "map": "function(doc) {if (doc.tileUrl) {emit(null, doc);}}"
     }
   },
   shows: {},

@@ -5,7 +5,8 @@ angular.module('vscope', [
   'ngRoute',
   'vscope.slideList',
   'vscope.slideView',
-  'CornerCouch'
+  'CornerCouch',
+  'ui-leaflet'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
