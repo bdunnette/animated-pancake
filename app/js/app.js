@@ -9,9 +9,11 @@ angular.module('vscope', [
   'ui-leaflet'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/'});
+  $routeProvider.otherwise({
+    redirectTo: '/'
+  });
 }]).
-run(function($rootScope, cornercouch){
+run(function($rootScope, cornercouch) {
   $rootScope.couch = cornercouch();
   $rootScope.couch.session();
 });

@@ -47,7 +47,7 @@ angular.module('vscope.slideView', ['ngRoute', 'ui-leaflet'])
       $scope.tiles.url = slide.tileUrl + '/{z}/{y}/{x}.jpg';
       console.log($scope.tiles);
     })
-    .error(function(error){
+    .error(function(error) {
       console.error(error);
     })
 

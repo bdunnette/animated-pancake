@@ -1,18 +1,18 @@
 var gulp = require('gulp'),
-browserSync = require('browser-sync'),
-couchapp = require('gulp-couchapp'),
-bower = require('gulp-bower');
+  browserSync = require('browser-sync'),
+  couchapp = require('gulp-couchapp'),
+  bower = require('gulp-bower');
 
 var couchappOptions = {
-  attachments:'app'
-  // auth:{username:admin, password:admin}
+  attachments: 'app'
+    // auth:{username:admin, password:admin}
 };
 
 gulp.task('bower', function() {
   return bower();
 });
 
-gulp.task('push', function () {
+gulp.task('push', function() {
   return gulp.src('couchapp.js')
     .pipe(couchapp.push('test', couchappOptions));
 });
@@ -39,5 +39,5 @@ gulp.task('bs-reload', function() {
 });
 
 gulp.task('default', ['bower', 'push', 'browser-sync'], function() {
-  gulp.watch(['app/**/*.js','app/**/*.css','app/**/*.html'], ['push', 'bs-reload']);
+  gulp.watch(['app/**/*.js', 'app/**/*.css', 'app/**/*.html'], ['push', 'bs-reload']);
 });

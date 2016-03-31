@@ -1,13 +1,24 @@
 var ddoc = {
   _id: '_design/vscope',
-  rewrites: [
-    { from: '_db',     to: '../..' },
-    { from: '_db/*',   to: '../../*' },
-    { from: '_ddoc',   to: '' },
-    { from: '_ddoc/*', to: '*' },
-    { from: '/',       to: 'index.html' },
-    { from: '/*',      to: '*' }
-  ],
+  rewrites: [{
+    from: '_db',
+    to: '../..'
+  }, {
+    from: '_db/*',
+    to: '../../*'
+  }, {
+    from: '_ddoc',
+    to: ''
+  }, {
+    from: '_ddoc/*',
+    to: '*'
+  }, {
+    from: '/',
+    to: 'index.html'
+  }, {
+    from: '/*',
+    to: '*'
+  }],
   views: {
     "slides": {
       "map": "function(doc) {if (doc.tileUrl) {emit(null, doc);}}"
