@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('vscope.view1', ['ngRoute'])
+angular.module('vscope.slideList', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/', {
+    templateUrl: 'slide/list/slide_list.html',
+    controller: 'SlideListCtrl'
   });
 }])
 
-.controller('View1Ctrl', ['$rootScope', '$scope', 'cornercouch', function($rootScope, $scope, cornercouch) {
+.controller('SlideListCtrl', ['$rootScope', '$scope', 'cornercouch', function($rootScope, $scope, cornercouch) {
   $scope.db = $rootScope.couch.getDB('test');
   $scope.newSlide = $scope.db.newDoc({
     type: 'slide'

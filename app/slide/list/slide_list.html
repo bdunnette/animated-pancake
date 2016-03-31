@@ -1,0 +1,17 @@
+<p>This is the partial for view 1.</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>UTC</th>
+      <th>Subject</th>
+      <th>By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="slide in db.rows" ng-click="rowClick($index)">
+      <td class="span2"><a ng-href="#/slide/{{slide.id}}">{{ slide.id }}</a></td>
+      <td class="span6">{{ slide.value }}</td>
+      <td class="span2">{{ slide.doc.alias }}</td>
+    </tr>
+  </tbody>
+</table>

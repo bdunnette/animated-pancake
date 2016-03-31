@@ -3,12 +3,12 @@
 // Declare app level module which depends on views, and components
 angular.module('vscope', [
   'ngRoute',
-  'vscope.view1',
-  'vscope.view2',
+  'vscope.slideList',
+  'vscope.slideView',
   'CornerCouch'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/'});
 }]).
 run(function($rootScope, cornercouch){
   $rootScope.couch = cornercouch();
